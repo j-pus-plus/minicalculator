@@ -12,7 +12,9 @@ public class Calculator {
         return Math.sqrt(n);
     }
 
-
+    public double Natural_logarithm(double n){
+       return Math.log(n);
+    }
     public static void main(String[] args) {
        Calculator cal=new Calculator();
        Scanner scanner = new Scanner(System.in);
@@ -89,8 +91,36 @@ public class Calculator {
 
                     break;
                 case 3:
-                    // permutation
-                    //System.out.println("Multiplication result is : " + calculator.multiply(number1, number2));
+                    // Natural logarithm
+
+                    try {
+                        System.out.print("Enter positive number : ");
+                        number1 = scanner.nextDouble();
+
+
+                        if(number1<=0){
+                            System.out.println("Only Numbers greater than 0 Allowed");
+                            System.out.println();
+                            System.out.println();
+                            System.out.println();
+                            break;
+                        }
+                        if(number1==Double.POSITIVE_INFINITY){
+                            System.out.println("Enter Valid Positive number Please!");
+                            System.out.println();
+                            System.out.println();
+                            System.out.println();
+                            break;
+                        }
+
+                    } catch (InputMismatchException error) {
+                        return;
+                    }
+                    System.out.println("Natural logarithm of " +number1+ " is : " + cal.Natural_logarithm(number1));
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+
                     break;
                 case 4:
                     // do division
