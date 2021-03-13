@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of mini_calculator
+  hosts: all
+  tasks:
+    - name: Pull mini_calculator image
+      docker_image:
+        name:  jaylimbasiya/mini_calculator
+        source: pull
