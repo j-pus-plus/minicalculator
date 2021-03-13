@@ -139,7 +139,7 @@ public class Calculator {
                     } catch (InputMismatchException error) {
                         return;
                     }
-                    System.out.println(number1 +" pwer "+ number1 + " is : " + cal.power(number1,number2));
+                    System.out.println(number1 +" power "+ number2 + " is : " + cal.power(number1,number2));
                     System.out.println();
                     System.out.println();
                     System.out.println();
