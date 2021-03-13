@@ -2,9 +2,20 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Calculator {
 
+   public  int factorial(int n){
+        if(n==1 | n==0)return 1;
+
+        return n*factorial(n-1);
+    }
+
+   public  double square_root(double n){
+        return Math.sqrt(n);
+    }
+
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+       Calculator cal=new Calculator();
+       Scanner scanner = new Scanner(System.in);
         double number1, number2;
 
         do {
@@ -20,8 +31,8 @@ public class Calculator {
 
             switch (choice) {
                 case 1:
-                    // do addition
-                    double ans;
+
+                    //sqrt
                     try {
                         System.out.print("Enter positive number : ");
                         number1 = scanner.nextDouble();
@@ -38,17 +49,47 @@ public class Calculator {
                     } catch (InputMismatchException error) {
                         return;
                     }
-                    System.out.println("Square of " +number1+ " is : " + Math.sqrt(number1));
+                    System.out.println("Square of " +number1+ " is : " + cal.square_root(number1));
                     System.out.println();
                     System.out.println();
                     System.out.println();
                     break;
                 case 2:
-                    // do subtraction
-                    //System.out.println("Subtraction result is : " + calculator.subtract(number1, number2));
+                    // do factorial
+                    int number;
+                    try {
+                        System.out.print("Enter number less than 20: ");
+                        number = scanner.nextInt();
+
+
+                        if(number<0 ){
+                            System.out.println("Only Positive Numbers and Valid Number Please!");
+                            System.out.println();
+                            System.out.println();
+                            System.out.println();
+                            break;
+                        }
+
+                        if(number>20){
+                            System.out.println("Numbers less-eq than 20 Please!");
+                            System.out.println();
+                            System.out.println();
+                            System.out.println();
+                            break;
+                        }
+
+
+                    } catch (InputMismatchException error) {
+                        return;
+                    }
+                    System.out.println("Factorial of " +number+ " is : " + cal.factorial(number));
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+
                     break;
                 case 3:
-                    // do multiplication
+                    // permutation
                     //System.out.println("Multiplication result is : " + calculator.multiply(number1, number2));
                     break;
                 case 4:
