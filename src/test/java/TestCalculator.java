@@ -39,5 +39,17 @@ public class TestCalculator {
         assertNotEquals("Natural log for False Positive", 3.9412437, cal.Natural_logarithm(52), DELTA);
     }
 
+    @Test
+    public void powerTruePositive(){
+        assertEquals("Power function for True Positive", 8, cal.power(2,3), DELTA);
+        assertEquals("Power function for True Positive", 27, cal.power(3,3), DELTA);
+        assertEquals("Power function for True Positive", Double.NaN, cal.power(3,Double.NaN), DELTA);
+        assertEquals("Power function for True Positive", 1, cal.power(13,0), DELTA);
+    }
+    @Test
+    public void powerFalsePositive(){
+        assertNotEquals("Power function for False Positive",Double.NaN, cal.power(3,3), DELTA);
+        assertNotEquals("Power function for False Positive",45, cal.power(3,2), DELTA);
+    }
 
 }

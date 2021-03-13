@@ -15,6 +15,9 @@ public class Calculator {
     public double Natural_logarithm(double n){
        return Math.log(n);
     }
+    public double power(double a, double b){
+       return Math.pow(a,b);
+    }
     public static void main(String[] args) {
        Calculator cal=new Calculator();
        Scanner scanner = new Scanner(System.in);
@@ -124,6 +127,24 @@ public class Calculator {
                     break;
                 case 4:
                     //power
+                    try {
+                        System.out.print("Enter number1 : ");
+                        number1 = scanner.nextDouble();
+
+                        System.out.print("Enter number2 : ");
+                        number2 = scanner.nextDouble();
+
+
+
+                    } catch (InputMismatchException error) {
+                        return;
+                    }
+                    System.out.println(number1 +" pwer "+ number1 + " is : " + cal.power(number1,number2));
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+
+
                     break;
                 default:
                     //System.out.println("Exiting....");
