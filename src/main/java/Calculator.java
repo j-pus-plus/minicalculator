@@ -1,4 +1,4 @@
-Import java.util.InputMismatchException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Calculator {
 
@@ -123,8 +123,7 @@ public class Calculator {
 
                     break;
                 case 4:
-                    // do division
-                    //System.out.println("Division result is : " + calculator.divide(number1, number2));
+                    //power
                     break;
                 default:
                     //System.out.println("Exiting....");
