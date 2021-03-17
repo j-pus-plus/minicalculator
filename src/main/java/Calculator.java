@@ -103,8 +103,8 @@ public class Calculator {
                             break;
                         }
 
-                        if(number>20){
-                            System.out.println("Numbers less-eq than 20 Please!");
+                        if(number>19){
+                            System.out.println("Numbers less than 20 Please!");
                             System.out.println();
                             System.out.println();
                             System.out.println();
